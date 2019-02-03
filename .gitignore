@@ -1,0 +1,5 @@
+# Dirs
+node_modules
+
+# Logs
+*.log
