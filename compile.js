@@ -1,11 +1,11 @@
 const path = require('path')
 const fs = require('fs')
-var solc = require('solc')
+const solc = require('solc')
 
 const contractFile = path.resolve(__dirname, 'contracts', 'inbox.sol')
 const source = fs.readFileSync(contractFile, 'utf8')
 
-var input = {
+const input = {
 	language: 'Solidity',
 	sources: {
 		'inbox.sol': {
@@ -19,15 +19,16 @@ var input = {
     },
 		outputSelection: {
 			'inbox.sol': {
-				'Inbox': [ 'abi', 'evm.bytecode.opcodes' ]
+				'Inbox': [ 'abi' , 'evm.bytecode']
 			}
 		}
 	}
 }
 
-var output = JSON.parse(solc.compile(JSON.stringify(input)))
+const compiledContract = JSON.parse(solc.compile(JSON.stringify(input)))
+const { abi, evm } = compiledContract.contracts['inbox.sol'].Inbox
 
-// `output` here contains the JSON output as specified in the documentation
-for (var contractName in output.contracts['inbox.sol']) {
-  console.log(output.contracts['inbox.sol'][contractName])
+module.export = {
+  abi,
+  bin: evm.bytecode.object
 }

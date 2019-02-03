@@ -1,10 +1,11 @@
 {
   "name": "inbox",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Smart contract",
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "dev": "node-dev --respawn compile.js",
     "compile": "node compile.js"
   },
   "repository": {
@@ -12,8 +13,9 @@
     "url": "git+https://github.com/arkgast/smart-contract-example.git"
   },
   "keywords": [
-    "Smart",
-    "Contract"
+    "Smart Contracts",
+    "Ethereum",
+    "Solidity"
   ],
   "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
   "license": "MIT",
@@ -23,5 +25,8 @@
   "homepage": "https://github.com/arkgast/smart-contract-example#readme",
   "dependencies": {
     "solc": "^0.5.3"
+  },
+  "devDependencies": {
+    "node-dev": "^3.1.3"
   }
 }
