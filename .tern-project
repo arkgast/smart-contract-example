@@ -4,9 +4,6 @@
     "browser",
     "react"
   ],
-  "loadEagerly": [
-    "src/**/*.jsx?"
-  ],
   "plugins": {
     "es_modules": {},
     "node": {},

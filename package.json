@@ -4,7 +4,7 @@
   "description": "Smart contract",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "mocha --watch",
     "lint": "eslint . --fix",
     "dev": "node-dev --respawn compile.js",
     "compile": "node compile.js"

@@ -28,7 +28,7 @@ const input = {
 const compiledContract = JSON.parse(solc.compile(JSON.stringify(input)))
 const { abi, evm } = compiledContract.contracts['inbox.sol'].Inbox
 
-module.export = {
+module.exports = {
   abi,
-  bin: evm.bytecode.object
+  bytecode: evm.bytecode.object
 }
