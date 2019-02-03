@@ -1,0 +1,23 @@
+{
+  "name": "inbox",
+  "version": "1.0.0",
+  "description": "Smart contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkgast/smart-contract-example.git"
+  },
+  "keywords": [
+    "Smart",
+    "Contract"
+  ],
+  "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arkgast/smart-contract-example/issues"
+  },
+  "homepage": "https://github.com/arkgast/smart-contract-example#readme"
+}
